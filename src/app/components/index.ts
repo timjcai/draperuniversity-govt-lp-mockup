@@ -1,3 +1,5 @@
 export * from './Emoji'
 export * from './GovernmentPartnerAvatar'
 export * from './Common'
+export * from './Icon'
+export * from './Card'
