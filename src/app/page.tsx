@@ -14,13 +14,13 @@ import { Icon } from "./components/Icon";
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between px-24">
+        <main className="flex min-h-screen flex-col items-center justify-between">
             <div className="z-10 max-w-5xl w-full items-center justify-between font-inter text-sm lg:flex flex-col relative">
                 <div
                     id="navbar"
-                    className="absolute flex flex-row w-[99vw] h-[5.91vw] items-center justify-between gap-[5.046vw] z-1000 top-[3.175vw]"
+                    className="absolute flex flex-row w-[99vw] h-[5.91vh] items-center justify-between gap-[5.046vw] z-1000 top-[3.175vw]"
                 >
-                    <div className="w-[12.948vw] h-[5.91vw] ms-[5.777vw]">
+                    <div className="w-[12.948vw] h-[5.91vh] ms-[5.777vw]">
                         <Image
                             src="/DU_logo_white.svg"
                             width={197}
@@ -51,45 +51,48 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center h-[50vw] relative -z-10 mb-4">
-                    <div className="w-screen absolute">
+                <div className="flex flex-col items-center h-[60vh] relative -z-10 mb-4">
+                    <div className="w-screen h-full">
                         <Image
                             src="/govt-hero.png"
-                            width={1512}
-                            height={745}
-                            layout="responsive"
+                            fill={true}
+                            // width={1512}
+                            // height={745}
+                            // layout="responsive"
                             alt="Draper University Government Innovation"
                             objectFit="cover"
                             objectPosition="left bottom"
                             style={{
+                                minHeight: "50vh",
+                                maxHeight: "70vh",
                                 background:
                                     "linear-gradient( 248.88deg, rgba(0, 0, 0, 0) -0.05%, rgba(0, 0, 0, 1) 71.28% )",
                             }}
                         />
                     </div>
-                    <div className="relative top-[20vw] w-[82vw] text-white">
-                        <h1 className="text-6xl font-bold mb-8 w-[50vw]">
+                    <div className="flex flex-col xl:items-start items-center absolute top-[19vh] w-[82vw] text-white">
+                        <h1 className="xl:text-6xl font-bold mb-8 xl:w-[50vw] w-full text-4xl xl:text-start text-center">
                             Bespoke Government Innovation Programs
                         </h1>
-                        <p className="text-xl w-[50vw] mb-4">
+                        <p className="xl:text-xl w-[50vw] mb-4 xl:w-[50vw] w-full text-xl xl:text-start text-center">
                             DraperU has partnered with 20+ Government Agencies
                             to support the growth of their innovation and
                             entrepreneurship ecosystems.
                         </p>
-                        <p className="text-xl w-[50vw] mb-4">
+                        <p className="text-xl w-[50vw] mb-4 xl:w-[50vw] w-full text-xl xl:text-start text-center">
                             Advance your country's innovation and reach your
-                            developental goals.
+                            developmental goals.
                         </p>
-                        <button className="bg-[#3865B6] rounded-[48px] px-8 py-4 mt-4 text-lg font-bold">
+                        <button className="bg-[#3865B6] rounded-[48px] px-8 py-4 mt-4 text-lg font-bold ">
                             Book a meeting
                         </button>
                     </div>
                 </div>
                 <div className="flex flex-col items-center mt-4 mb-4">
                     <p className="text-lg font-light mb-4">
-                        Our Government Partners
+                        A few of our Government Partners
                     </p>
-                    <div className="flex flex-row mb-12 w-[80vw]">
+                    <div className="flex flex-row mb-12 w-[80vw] xl:flex xl:flex-row grid grid-cols-3 gap-4">
                         {govtLogos.map((items) => {
                             return (
                                 <GovernmentPartnersAvatar
@@ -104,17 +107,17 @@ export default function Home() {
                         })}
                     </div>
                 </div>
-                <section className="flex flex-col justify-center items-center min-h-[50vw] bg-[#201981] text-[#ffffff] w-screen">
-                    <div className="mb-20">
+                <section className="flex flex-col justify-center items-center min-h-[50vw] bg-[#201981] text-[#ffffff] w-screen py-24">
+                    <div className="flex justify-center items-center mb-20">
                         <H3
                             text={
                                 "We are Venture Capitalists in the education business"
                             }
                         />
                     </div>
-                    <div className="flex flex-row justify-between items-center px-[15vw] w-[100vw] mb-10">
+                    <div className="flex xl:flex-row flex-col gap-24 justify-between items-center px-[15vw] w-[100vw] mb-24">
                         <div className="flex flex-col justify-center items-center">
-                            <h1 className="text-[140px] font-bold text-[#255EFB] leading-[140px]">
+                            <h1 className="text-[10vh] font-bold text-[#255EFB] leading-[10vh]">
                                 $1B
                             </h1>
                             <p className="text-[32px] font-semibold">
@@ -122,13 +125,13 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="flex flex-col justify-center items-center">
-                            <h1 className="text-[140px] font-bold text-[#255EFB] leading-[140px]">
+                            <h1 className="text-[10vh] font-bold text-[#255EFB] leading-[10vh]">
                                 3.7K
                             </h1>
                             <p className="text-[32px] font-semibold">Alumni</p>
                         </div>
                         <div className="flex flex-col justify-center items-center">
-                            <h1 className="text-[140px] font-bold text-[#255EFB] leading-[140px]">
+                            <h1 className="text-[10vh] font-bold text-[#255EFB] leading-[10vh]">
                                 10K+
                             </h1>
                             <p className="text-[32px] font-semibold">
@@ -141,7 +144,7 @@ export default function Home() {
                     <p className="text-lg font-light mb-4">
                         We are early stage backers of
                     </p>
-                    <div className="flex flex-row mb-8">
+                    <div className="xl:flex xl:flex-row mb-8 grid grid-cols-4 gap-4">
                         {portfolioCompanies.map((items) => {
                             return (
                                 <LogoAvatar
@@ -169,7 +172,7 @@ export default function Home() {
                                 and invest in high quality startups.
                             </p>
                         </div>
-                        <div className="grid grid-cols-4 gap-8 mb-12">
+                        <div className="grid xl:grid-cols-4 grid-cols-2 gap-8 mb-12">
                             <Card>
                                 <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
                                     <Icon label="growth" />
@@ -273,7 +276,7 @@ export default function Home() {
                     <p className="text-lg font-light mb-4">
                         The teams that have come from our programs
                     </p>
-                    <div className="flex flex-row mb-8">
+                    <div className="xl:flex xl:flex-row mb-8 grid grid-cols-3">
                         {alumniCompanies.map((items) => {
                             return (
                                 <LogoAvatar
@@ -289,8 +292,8 @@ export default function Home() {
                 </div>
 
                 <section className="bg-[#133181] w-screen px-[15vw] py-[5vw] text-white">
-                    <div className="flex flex-row justify-between my-12">
-                        <div className="flex items-center">
+                    <div className="flex xl:flex-row flex-col justify-between my-12">
+                        <div className="flex items-center justify-center">
                             <Image
                                 src="/portfolioCompanies/bookmockupplaceholder.jpeg"
                                 alt="Ecosystem Impact Casestudies"
@@ -299,17 +302,17 @@ export default function Home() {
                                 objectFit="cover"
                             />
                         </div>
-                        <div className="flex flex-col">
-                            <h2 className="text-4xl font-bold mb-8 w-[35vw]">
+                        <div className="flex flex-col items-center w-full xl:items-start xl:w-[35vw]">
+                            <h2 className="text-4xl font-bold mb-8 mt-4 xl:mt-0">
                                 Download our Ecosystem Impact Casestudies
                             </h2>
-                            <p className="w-[35vw] text-[1rem] mb-8">
+                            <p className="text-[1rem] mb-8">
                                 Get the actionable insights on how to grow your
                                 entreprenuerial ecosystem - breakdown the growth
                                 journey of some our biggest investments - Skype,
                                 Baidu and more...
                             </p>
-                            <div className="grid grid-cols-2 w-[35vw] mb-4 text-[1rem] font-semibold">
+                            <div className="grid grid-cols-2 mb-4 text-[1rem] font-semibold w-full">
                                 <div className="flex flex-row items-center gap-2 col-span-1 mb-4">
                                     <Icon label={"check"} />
                                     <p>GDP contribution breakdown</p>
@@ -327,7 +330,7 @@ export default function Home() {
                                     <p>Ripple effect breakdown</p>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-2 gap-4 w-full">
                                 <div className="col-span-1">
                                     <label className="text-md">Name</label>
                                     <input
@@ -377,8 +380,8 @@ export default function Home() {
                                     "How do we partner with Government Agencies?"
                                 }
                             />
-                            <div className="grid grid-cols-3 gap-8 gap-y-28 mt-20 justify-center">
-                                <div className="col-span-1 relative">
+                            <div className="grid xl:grid-cols-3 grid-cols-1 gap-8 gap-y-28 mt-20 justify-center">
+                                <div className="xl:col-span-1 relative h-[380px] xl:h-auto">
                                     <Image
                                         fill={true}
                                         src="/entrepreneurship101.png"
@@ -389,7 +392,7 @@ export default function Home() {
                                         }}
                                     />
                                 </div>
-                                <div className="col-span-2">
+                                <div className="xl:col-span-2">
                                     <Card>
                                         <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
                                             <Icon label="entreprenuer" />
@@ -416,7 +419,8 @@ export default function Home() {
                                         </button>
                                     </Card>
                                 </div>
-                                <div className="col-span-2">
+
+                                <div className="xl:col-span-2">
                                     <Card>
                                         <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
                                             <Icon label="startup" />
@@ -444,7 +448,7 @@ export default function Home() {
                                         </button>
                                     </Card>
                                 </div>
-                                <div className="col-span-1 relative">
+                                <div className="col-span-1 relative h-[380px] xl:h-auto">
                                     <Image
                                         fill={true}
                                         src="/incubator.png"
@@ -455,7 +459,7 @@ export default function Home() {
                                         }}
                                     />
                                 </div>
-                                <div className="col-span-1 relative">
+                                <div className="col-span-1 relative h-[380px] xl:h-auto">
                                     <Image
                                         fill={true}
                                         src="/acceleration.png"
