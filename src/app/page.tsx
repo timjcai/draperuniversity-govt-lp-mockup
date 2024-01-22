@@ -688,7 +688,7 @@ export default function Home() {
                         </div>
                         <div className="flex justify-center h-[500px] w-full">
                             <Image
-                                src="/Tim Draper.jpeg"
+                                src="/timdraper.jpeg"
                                 alt="Tim Draper"
                                 height={100}
                                 width={500}
