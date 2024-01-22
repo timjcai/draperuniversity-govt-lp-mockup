@@ -330,7 +330,16 @@ export default function Home() {
                                     <p>Ripple effect breakdown</p>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-2 gap-4 w-full">
+                            <div className="w-full">
+                                <div
+                                    className="pipedriveWebForms"
+                                    data-pd-webforms="https://webforms.pipedrive.com/f/63kW5dWc1oPBO3X4eZURDlesJHvjhut3u5fiISr12OmFMZi9zcyOXWT4avo0NiuhBF"
+                                >
+                                    <script src="https://webforms.pipedrive.com/f/loader"></script>
+                                </div>
+                            </div>
+
+                            {/* <div className="grid grid-cols-2 gap-4 w-full">
                                 <div className="col-span-1">
                                     <label className="text-md">Name</label>
                                     <input
@@ -361,10 +370,10 @@ export default function Home() {
                                         newsletter
                                     </label>
                                 </div>
-                            </div>
-                            <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
+                            </div> */}
+                            {/* <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
                                 Download
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </section>
@@ -636,55 +645,12 @@ export default function Home() {
                     </div>
                 </div>
                 <section className="bg-[#133181] w-screen px-[15vw] py-[5vw] text-white">
-                    <div className="flex flex-row justify-between gap-12">
-                        <div className="flex flex-col">
-                            <h2 className="text-4xl font-bold mb-4 w-[35vw]">
-                                Let's grow your Startup ecosystem together
-                            </h2>
-                            <p className="w-[35vw] text-[1rem] mb-4">
-                                Schedule a strategy call today
-                            </p>
-                            {/* <div className="grid grid-cols-2 w-[35vw] mb-4 text-[1rem] font-semibold">
-                                <div className="col-span-1 mb-2">
-                                    ✅ GDP contribution breakdown
-                                </div>
-                                <div className="col-span-1">
-                                    ✅ Job creation metrics
-                                </div>
-                                <div className="col-span-1">
-                                    ✅ Growth Hacking strategies
-                                </div>
-                                <div className="col-span-1">
-                                    ✅ Ripple effect breakdown
-                                </div>
-                            </div> */}
-                            <form className="flex flex-col gap-2">
-                                <label className="text-md">Email</label>
-                                <input
-                                    type="email"
-                                    className="w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
-                                ></input>
-                                <label className="text-md">Name</label>
-                                <input
-                                    type="text"
-                                    className="w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
-                                ></input>
-                                <label className="text-md">Organization</label>
-                                <input
-                                    type="text"
-                                    className="w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
-                                ></input>
-                                {/* <div className="flex flex-row gap-2 mt-2">
-                                <input type="checkbox"></input>
-                                <label>
-                                    Subscribe to the Draper University
-                                    newsletter
-                                </label>
-                            </div> */}
-                                <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
-                                    Book a meeting
-                                </button>
-                            </form>
+                    <div className="flex flex-row justify-between items-center gap-12">
+                        <div
+                            className="pipedriveWebForms"
+                            data-pd-webforms="https://webforms.pipedrive.com/f/6rG46dzR3kUrVs5l4wC6qQZCbS1s0CihnZuvm8LOyxKzOgoAyZwySypOwnLW8KoIM3"
+                        >
+                            <script src="https://webforms.pipedrive.com/f/loader"></script>
                         </div>
                         <div className="flex justify-center h-[500px] w-full">
                             <Image
