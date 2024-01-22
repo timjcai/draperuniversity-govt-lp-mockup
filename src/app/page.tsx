@@ -362,7 +362,6 @@ export default function Home() {
                                     </label>
                                 </div>
                             </div>
-
                             <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
                                 Download
                             </button>
@@ -502,43 +501,55 @@ export default function Home() {
                         <H3 text={"A day in our programs"} />
                     </div>
                     <div className="flex flex-row justify-center gap-0 items-center px-[15vw] w-[100vw] mb-10">
-                        <div className="flex flex-col justify-center items-end w-[20vw] pb-8 border-b-2">
+                        <div className="flex flex-col justify-center items-end w-[20vw] pb-8 border-b-2 relative">
                             <h1 className="text-2xl font-bold text-[#255EFB] leading-[140px]">
                                 01
                             </h1>
-                            <p className="text-lg">Guest Speaker Session</p>
+                            <p className="text-xl font-bold">Speaker Session</p>
+                            <div className="absolute -bottom-2.5">
+                                <Icon label={"circle"} />
+                            </div>
                         </div>
-                        <div className="flex flex-col justify-center items-end w-[20vw]  pb-8 border-b-2">
+                        <div className="flex flex-col justify-center items-end w-[20vw]  pb-8 border-b-2 relative">
                             <h1 className="text-2xl font-bold text-[#255EFB] leading-[140px]">
                                 02
                             </h1>
-                            <p className="text-lg">Problem Solving Challenge</p>
+                            <p className="text-xl font-bold">Problem Solving</p>
+                            <div className="absolute -bottom-2.5">
+                                <Icon label={"circle"} />
+                            </div>
                         </div>
-                        <div className="flex flex-col justify-center items-end w-[20vw]  pb-8 border-b-2">
+                        <div className="flex flex-col justify-center items-end w-[20vw]  pb-8 border-b-2 relative">
                             <h1 className="text-2xl font-bold text-[#255EFB] leading-[140px]">
                                 03
                             </h1>
-                            <p className="text-lg">1:1 Mentoring</p>
+                            <p className="text-xl font-bold">1:1 Mentoring</p>
+                            <div className="absolute -bottom-2.5">
+                                <Icon label={"circle"} />
+                            </div>
                         </div>
-                        <div className="flex flex-col justify-center items-end w-[20vw]  pb-8 border-b-2">
+                        <div className="flex flex-col justify-center items-end w-[20vw]  pb-8 border-b-2 relative">
                             <h1 className="text-2xl font-bold text-[#255EFB] leading-[140px]">
                                 04
                             </h1>
-                            <p className="text-lg">Pitch Practice</p>
+                            <p className="text-xl font-bold">Pitch Practice</p>
+                            <div className="absolute -bottom-2.5">
+                                <Icon label={"circle"} />
+                            </div>
                         </div>
                     </div>
                     <div className="flex flex-row justify-center items-center px-[15vw] w-[100vw] mb-10">
                         <div className="flex flex-col justify-center items-end w-[20vw]">
-                            <p className="text-lg">9AM</p>
+                            <p className="text-lg">Session 1</p>
                         </div>
                         <div className="flex flex-col justify-center items-end w-[20vw]">
-                            <p className="text-lg">11AM</p>
+                            <p className="text-lg">Session 2</p>
                         </div>
                         <div className="flex flex-col justify-center items-end w-[20vw]">
-                            <p className="text-lg">1PM</p>
+                            <p className="text-lg">Session 3</p>
                         </div>
                         <div className="flex flex-col justify-center items-end w-[20vw]">
-                            <p className="text-lg">3PM</p>
+                            <p className="text-lg">Session 4</p>
                         </div>
                     </div>
                 </section>
@@ -625,7 +636,7 @@ export default function Home() {
                     </div>
                 </div>
                 <section className="bg-[#133181] w-screen px-[15vw] py-[5vw] text-white">
-                    <div className="flex flex-row justify-between">
+                    <div className="flex flex-row justify-between gap-12">
                         <div className="flex flex-col">
                             <h2 className="text-4xl font-bold mb-4 w-[35vw]">
                                 Let's grow your Startup ecosystem together
@@ -647,30 +658,44 @@ export default function Home() {
                                     ✅ Ripple effect breakdown
                                 </div>
                             </div> */}
-                            <label className="text-md">Email</label>
-                            <input
-                                type="email"
-                                className="w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
-                            ></input>
-                            {/* <div className="flex flex-row gap-2 mt-2">
+                            <form className="flex flex-col gap-2">
+                                <label className="text-md">Email</label>
+                                <input
+                                    type="email"
+                                    className="w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
+                                ></input>
+                                <label className="text-md">Name</label>
+                                <input
+                                    type="text"
+                                    className="w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
+                                ></input>
+                                <label className="text-md">Organization</label>
+                                <input
+                                    type="text"
+                                    className="w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
+                                ></input>
+                                {/* <div className="flex flex-row gap-2 mt-2">
                                 <input type="checkbox"></input>
                                 <label>
                                     Subscribe to the Draper University
                                     newsletter
                                 </label>
                             </div> */}
-
-                            <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
-                                Book a meeting
-                            </button>
+                                <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
+                                    Book a meeting
+                                </button>
+                            </form>
                         </div>
-                        <div>
+                        <div className="flex justify-center h-[500px] w-full">
                             <Image
-                                src="/portfolioCompanies/bookmockupplaceholder.jpeg"
-                                alt="Ecosystem Impact Casestudies"
+                                src="/Tim Draper.jpeg"
+                                alt="Tim Draper"
                                 height={100}
                                 width={500}
-                                objectFit="cover"
+                                style={{
+                                    objectFit: "cover",
+                                    borderRadius: "16px",
+                                }}
                             />
                         </div>
                     </div>

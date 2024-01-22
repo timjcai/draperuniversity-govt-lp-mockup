@@ -5,6 +5,7 @@ import {
     faAward,
     faBrain,
     faBridge,
+    faCircle,
     faCircleCheck,
     faCity,
     faCoins,
@@ -44,6 +45,7 @@ const iconMapping: { [key in IconType]: IconDefinition } = {
     deeptech: faRobot,
     healthtech: faHeartPulse,
     fintech: faCoins,
+    circle: faCircle,
 };
 export type IconType = SectionType;
 
@@ -65,7 +67,8 @@ export type SectionType =
     | "gaming"
     | "deeptech"
     | "healthtech"
-    | "fintech";
+    | "fintech"
+    | "circle";
 
 export const Icon: FC<IconProps> = ({ label }) => {
     const icon = iconMapping[label];
