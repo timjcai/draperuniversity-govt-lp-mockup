@@ -184,38 +184,38 @@ const pastSpeakers = [
 
 const alumniCompanies = [
     {
-        src: "/portfolioCompanies/helium.png",
-        alt: "Helium Logo",
+        src: "/portfolioCompanies/hydra.png",
+        alt: "Hydra Energy Logo",
         width: 102,
         height: 50,
     },
     {
-        src: "/portfolioCompanies/henry.png",
-        alt: "HENRY Logo",
-        width: 102,
-        height: 50,
-    },
-    {
-        src: "/portfolioCompanies/lemon.png",
+        src: "/portfolioCompanies/lemonsquare.png",
         alt: "Lemon Cash Logo",
         width: 102,
         height: 50,
     },
     {
-        src: "/portfolioCompanies/ring.png",
-        alt: "Ring Logo",
+        src: "/portfolioCompanies/1047.png",
+        alt: "1047 Games Logo",
         width: 102,
         height: 50,
     },
     {
-        src: "/portfolioCompanies/nVision.png",
+        src: "/portfolioCompanies/nvisionsquare.png",
         alt: "nVision Logo",
         width: 102,
         height: 35,
     },
     {
-        src: "/portfolioCompanies/yestheory.png",
-        alt: "YES Theory Logo",
+        src: "/portfolioCompanies/archform.png",
+        alt: "Arch Form Logo",
+        width: 102,
+        height: 50,
+    },
+    {
+        src: "/portfolioCompanies/heliumsquare.png",
+        alt: "Helium Health Logo",
         width: 102,
         height: 50,
     },
