@@ -7,11 +7,16 @@ import {
     faBridge,
     faCircle,
     faCircleCheck,
+    faCircleInfo,
     faCity,
     faCoins,
+    faExpand,
+    faFilter,
     faGamepad,
     faHeartPulse,
     faMagnifyingGlass,
+    faMicrochip,
+    faMoneyBillTrendUp,
     faPeopleCarryBox,
     faRobot,
     faRocket,
@@ -46,6 +51,12 @@ const iconMapping: { [key in IconType]: IconDefinition } = {
     healthtech: faHeartPulse,
     fintech: faCoins,
     circle: faCircle,
+    funnel: faFilter,
+    "disruptive technology": faMicrochip,
+    "global network": faHive,
+    guidance: faCircleInfo,
+    "vertical expansion": faExpand,
+    "investment opportunity": faMoneyBillTrendUp,
 };
 export type IconType = SectionType;
 
@@ -68,7 +79,13 @@ export type SectionType =
     | "deeptech"
     | "healthtech"
     | "fintech"
-    | "circle";
+    | "circle"
+    | "funnel"
+    | "disruptive technology"
+    | "global network"
+    | "guidance"
+    | "vertical expansion"
+    | "investment opportunity";
 
 export const Icon: FC<IconProps> = ({ label }) => {
     const icon = iconMapping[label];

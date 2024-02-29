@@ -36,6 +36,26 @@ export const GovernmentPartnersAvatar: FC<GovernmentAvatar> = ({
     );
 };
 
+export const CorporatePartnersAvatar: FC<GovernmentAvatar> = ({
+    src,
+    alt,
+    width,
+    height,
+    country,
+}) => {
+    return (
+        <div className="flex justify-center items-center relative mx-4">
+            <Image
+                src={src}
+                alt={alt}
+                width={width}
+                height={height}
+                style={{ objectFit: "cover" }}
+            />
+        </div>
+    );
+};
+
 export const LogoAvatar: FC<ImageProps> = ({ src, alt, width, height }) => {
     return (
         <div className="flex justify-center items-center mx-4">

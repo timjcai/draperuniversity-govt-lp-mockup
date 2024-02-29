@@ -1,18 +1,227 @@
-"use client";
-import { Navbar } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
-import { Emoji } from "./components/Emoji";
+import React from "react";
 import {
+    Card,
+    CorporatePartnersAvatar,
     GovernmentPartnersAvatar,
+    H3,
+    H4,
     HeadshotAndLogoAvatar,
+    Icon,
     LogoAvatar,
-} from "./components/GovernmentPartnerAvatar";
-import { Card, H3, H4 } from "./components";
-import { Icon } from "./components/Icon";
+} from "../components";
 
-export default function Home() {
+const partnerLogos = [
+    {
+        src: "/partnerCompanies/ey.png",
+        alt: "ey",
+        width: 100,
+        height: 40,
+        country: "japan",
+    },
+    {
+        src: "/partnerCompanies/INGsquare.png",
+        alt: "ing",
+        width: 100,
+        height: 40,
+        country: "korea",
+    },
+    {
+        src: "/partnerCompanies/mitsubishisquare.png",
+        alt: "Ankara Development Agency logo",
+        width: 100,
+        height: 40,
+        country: "turkey",
+    },
+    {
+        src: "/partnerCompanies/orangesquare.png",
+        alt: "SIDF logo",
+        width: 100,
+        height: 40,
+        country: "saudiarabia",
+    },
+    {
+        src: "/partnerCompanies/turkishairlines.png",
+        alt: "DER logo",
+        width: 100,
+        height: 40,
+        country: "sengal",
+    },
+    {
+        src: "/partnerCompanies/UNDPsquare.png",
+        alt: "ASVDA logo",
+        width: 100,
+        height: 40,
+        country: "taiwan",
+    },
+];
+
+const portfolioCompanies = [
+    {
+        src: "/portfolioCompanies/baidu.png",
+        alt: "Baidu Logo",
+        width: 102,
+        height: 50,
+    },
+    {
+        src: "/portfolioCompanies/skype.png",
+        alt: "Skype Logo",
+        width: 102,
+        height: 50,
+    },
+    {
+        src: "/portfolioCompanies/Coinbase-logo.png",
+        alt: "Coinbase Logo",
+        width: 102,
+        height: 50,
+    },
+    {
+        src: "/portfolioCompanies/tesla.png",
+        alt: "Tesla Logo",
+        width: 102,
+        height: 35,
+    },
+    {
+        src: "/portfolioCompanies/DocuSign-Logo.png",
+        alt: "Docusign Logo",
+        width: 102,
+        height: 50,
+    },
+    {
+        src: "/portfolioCompanies/hotmail.png",
+        alt: "Hotmail Logo",
+        width: 102,
+        height: 50,
+    },
+    {
+        src: "/portfolioCompanies/Robinhood-logo.png",
+        alt: "Robinhood Logo",
+        width: 102,
+        height: 50,
+    },
+
+    {
+        src: "/portfolioCompanies/twitch.png",
+        alt: "Twitch Logo",
+        width: 102,
+        height: 35,
+    },
+];
+
+const pastSpeakers = [
+    {
+        headshot: {
+            src: "/pastSpeakers/musk.png",
+            alt: "Elon Musk",
+            width: 150,
+            height: 50,
+        },
+        logo: {
+            src: "/pastSpeakers/tesla.avif",
+            alt: "Tesla Logo",
+            width: 50,
+            height: 50,
+        },
+    },
+    {
+        headshot: {
+            src: "/pastSpeakers/andreessen.png",
+            alt: "Mark Andreessen",
+            width: 150,
+            height: 50,
+        },
+        logo: {
+            src: "/pastSpeakers/a16z.png",
+            alt: "a16z Logo",
+            width: 50,
+            height: 50,
+        },
+    },
+    {
+        headshot: {
+            src: "/pastSpeakers/ravikant.png",
+            alt: "Naval Ravikant",
+            width: 150,
+            height: 50,
+        },
+        logo: {
+            src: "/pastSpeakers/angellist.png",
+            alt: "Angel List Logo",
+            width: 50,
+            height: 50,
+        },
+    },
+    {
+        headshot: {
+            src: "/pastSpeakers/phan.png",
+            alt: "Michelle Phan",
+            width: 150,
+            height: 50,
+        },
+        logo: {
+            src: "/pastSpeakers/ipsy.png",
+            alt: "Ipsy Logo",
+            width: 50,
+            height: 50,
+        },
+    },
+    {
+        headshot: {
+            src: "/pastSpeakers/hyman.png",
+            alt: "Jennifer Hyman",
+            width: 150,
+            height: 50,
+        },
+        logo: {
+            src: "/pastSpeakers/rtr.png",
+            alt: "Run The Runway Logo",
+            width: 50,
+            height: 50,
+        },
+    },
+];
+
+const alumniCompanies = [
+    {
+        src: "/portfolioCompanies/helium.png",
+        alt: "Helium Logo",
+        width: 102,
+        height: 50,
+    },
+    {
+        src: "/portfolioCompanies/henry.png",
+        alt: "HENRY Logo",
+        width: 102,
+        height: 50,
+    },
+    {
+        src: "/portfolioCompanies/lemon.png",
+        alt: "Lemon Cash Logo",
+        width: 102,
+        height: 50,
+    },
+    {
+        src: "/portfolioCompanies/ring.png",
+        alt: "Ring Logo",
+        width: 102,
+        height: 50,
+    },
+    {
+        src: "/portfolioCompanies/nVision.png",
+        alt: "nVision Logo",
+        width: 102,
+        height: 35,
+    },
+    {
+        src: "/portfolioCompanies/yestheory.png",
+        alt: "YES Theory Logo",
+        width: 102,
+        height: 50,
+    },
+];
+
+const page = () => {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between">
             <div className="z-10 max-w-5xl w-full items-center justify-between font-inter text-sm lg:flex flex-col relative">
@@ -73,17 +282,19 @@ export default function Home() {
                         />
                     </div>
                     <div className="flex flex-col xl:items-start items-center absolute top-[19vh] w-[82vw] text-white">
-                        <h1 className="xl:text-6xl font-bold mb-8 xl:w-[50vw] w-full text-4xl xl:text-start text-center">
-                            Bespoke Government Innovation Programs
+                        <h1 className="xl:text-xl font-regular xl:w-[50vw] w-full text-lg xl:text-start text-center">
+                            Corporate Accelerator Patnerships
                         </h1>
+                        <h2 className="xl:text-6xl font-bold mb-8 xl:w-[50vw] w-full text-4xl xl:text-start text-center">
+                            Discover, Mentor and Grow the World's Best Startups.
+                        </h2>
                         <p className="xl:text-xl w-[50vw] mb-4 xl:w-[50vw] w-full text-xl xl:text-start text-center">
-                            DraperU has partnered with 20+ Government Agencies
-                            to support the growth of their innovation and
-                            entrepreneurship ecosystems.
+                            Custom designed programming to give you and your
+                            startups the edge on the competition.
                         </p>
                         <p className="text-xl w-[50vw] mb-4 xl:w-[50vw] w-full text-xl xl:text-start text-center">
-                            Advance your country's innovation and reach your
-                            developmental goals.
+                            Future-proof your business by investing and building
+                            with the most exciting startups in your industry.
                         </p>
                         <button className="bg-[#3865B6] rounded-[48px] px-8 py-4 mt-4 text-lg font-bold ">
                             Book a meeting
@@ -92,12 +303,12 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col items-center mt-4 mb-4">
                     <p className="text-lg font-light mb-4">
-                        A few of our Government Partners
+                        A few of our Corporate Partners
                     </p>
-                    <div className="flex flex-row mb-12 w-[80vw] xl:flex xl:flex-row grid grid-cols-3 gap-4">
-                        {govtLogos.map((items) => {
+                    <div className="flex flex-row mb-12 w-[80vw] xl:flex xl:justify-center grid grid-cols-3 gap-4">
+                        {partnerLogos.map((items) => {
                             return (
-                                <GovernmentPartnersAvatar
+                                <CorporatePartnersAvatar
                                     key={items.alt}
                                     src={items.src}
                                     alt={items.alt}
@@ -109,7 +320,7 @@ export default function Home() {
                         })}
                     </div>
                 </div>
-                <section className="flex flex-col justify-center items-center min-h-[50vw] bg-[#201981] text-[#ffffff] w-screen py-24">
+                {/* <section className="flex flex-col justify-center items-center min-h-[50vw] bg-[#201981] text-[#ffffff] w-screen py-24">
                     <div className="flex justify-center items-center mb-20">
                         <H3
                             text={
@@ -141,32 +352,12 @@ export default function Home() {
                             </p>
                         </div>
                     </div>
-                </section>
-                <div className="flex flex-col items-center my-12">
-                    <p className="text-lg font-light mb-4">
-                        We are early stage backers of
-                    </p>
-                    <div className="xl:flex xl:flex-row mb-8 grid grid-cols-4 gap-4">
-                        {portfolioCompanies.map((items) => {
-                            return (
-                                <LogoAvatar
-                                    key={items.alt}
-                                    src={items.src}
-                                    alt={items.alt}
-                                    width={items.width}
-                                    height={items.height}
-                                />
-                            );
-                        })}
-                    </div>
-                </div>
+                </section> */}
                 <section className="bg-[#CBDFFC] w-screen px-[15vw] py-[6vw] mb-4">
                     <div className="flex flex-col items-center mb-4">
                         <div className="flex flex-col items-center mb-12">
                             <H3
-                                text={
-                                    "Importance of investing in your ecosystem"
-                                }
+                                text={"Importance of a Corporate Accelerator"}
                             />
                             <p className="text-lg text-center">
                                 <br />
@@ -174,98 +365,81 @@ export default function Home() {
                                 and invest in high quality startups.
                             </p>
                         </div>
-                        <div className="grid xl:grid-cols-4 grid-cols-2 gap-8 mb-12">
+                        <div className="grid xl:grid-cols-3 grid-cols-2 gap-8 mb-12">
                             <Card>
                                 <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                    <Icon label="growth" />
+                                    <div className="h-6 w-6">
+                                        <Icon label="funnel" />
+                                    </div>
                                 </div>
-                                <H4 text={"GDP Growth"} />
+                                <H4 text={"Innovation Funnel"} />
                                 <p className="text-lg">
-                                    Startups contribute to the economic growth
-                                    by creating new products and services,
-                                    attracting investment, and generating
-                                    revenue.
+                                    Create or build on your pipeline of
+                                    innovation. Surround your teams with
+                                    mentorship and get access to additional
+                                    venture capital networks.
                                 </p>
                             </Card>
                             <Card>
                                 <div className="bg-[#EEE5FE] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                    <Icon label="job" />
+                                    <div className="h-6 w-6">
+                                        <Icon label="disruptive technology" />
+                                    </div>
                                 </div>
-                                <H4 text={"Job Creation"} />
+                                <H4 text={"Disruptive Technology & Teams"} />
                                 <p className="text-lg">
-                                    As startups grow, they generate direct jobs
-                                    and stimulate the broader economy by
-                                    engaging with suppliers and service
-                                    providers.
+                                    Get early access to technology or talent
+                                    that could provide a competitive edge in
+                                    your industry.
                                 </p>
                             </Card>
                             <Card>
                                 <div className="bg-[#C1D7CA] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                    <Icon label="fdi" />
+                                    <div className="h-6 w-6">
+                                        <Icon label="global network" />
+                                    </div>
                                 </div>
-                                <H4 text={"Foreign Direct Investment"} />
+                                <H4 text={"Global Network"} />
                                 <p className="text-lg">
-                                    Building a pipeline of promising startups
-                                    and scaleups with global impact can attract
-                                    investment opportunity from investors
-                                    seeking high-potential ventures.
+                                    Join and gain access to our global network
+                                    of investors, mentors and startups.
                                 </p>
                             </Card>
                             <Card>
                                 <div className="bg-[#FFE6EF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                    <Icon label="bridge" />
+                                    <div className="h-6 w-6">
+                                        <Icon label="guidance" />
+                                    </div>
                                 </div>
-                                <H4 text={"Bridge to Silicon Valley"} />
+                                <H4 text={"Expert Guidance"} />
                                 <p className="text-lg">
-                                    Connect your local startups with the best
-                                    mentors, VCs and Angel Investors from the
-                                    most innovative place in the world - Silicon
-                                    Valley.
-                                </p>
-                            </Card>
-                            <Card>
-                                <div className="bg-[#EEE5FE] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                    <Icon label="skill" />
-                                </div>
-                                <H4 text={"Skilled Technical Workforce"} />
-                                <p className="text-lg">
-                                    Create demand for technical skills. Attract
-                                    global talent or grow internal talent into
-                                    your local economy.
+                                    Leverage our investor and startup experience
                                 </p>
                             </Card>
                             <Card>
                                 <div className="bg-[#FFE6EF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                    <Icon label="research" />
+                                    <div className="h-6 w-6">
+                                        <Icon label="vertical expansion" />
+                                    </div>
                                 </div>
-                                <H4 text={"Innovation and Research"} />
+                                <H4 text={"Market Expansion"} />
                                 <p className="text-lg">
-                                    Create innovative technologies and
-                                    businesses that address your countries
-                                    development goals.
+                                    Expand into new markets or disrupt existing
+                                    ones by injecting new technology into your
+                                    internal processes.
                                 </p>
                             </Card>
                             <Card>
                                 <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                    <Icon label="diversification" />
+                                    <div className="h-6 w-6">
+                                        <Icon label="investment opportunity" />
+                                    </div>
                                 </div>
-                                <H4 text={"Economic Diversification"} />
+                                <H4 text={"Investment Opportunities"} />
                                 <p className="text-lg">
-                                    Supporting a diverse range of startups
-                                    reduces the dependence on a single sector,
-                                    making your economy more resilient to
-                                    economic fluctuations.
-                                </p>
-                            </Card>
-                            <Card>
-                                <div className="bg-[#C1D7CA] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                    <Icon label="recognition" />
-                                </div>
-                                <H4 text={"International Recognition"} />
-                                <p className="text-lg">
-                                    The most innovative places in the world
-                                    attract the attention of global investors,
-                                    entrepreneurs and talent.
+                                    Work closely with high-growth, high
+                                    potential startups. Get early access to deal
+                                    flow opportunities
                                 </p>
                             </Card>
                         </div>
@@ -292,7 +466,24 @@ export default function Home() {
                         })}
                     </div>
                 </div>
-
+                <div className="flex flex-col items-center my-12">
+                    <p className="text-lg font-light mb-4">
+                        Some of the startups from our accelerator programs
+                    </p>
+                    <div className="xl:flex xl:flex-row mb-8 grid grid-cols-4 gap-4">
+                        {portfolioCompanies.map((items) => {
+                            return (
+                                <LogoAvatar
+                                    key={items.alt}
+                                    src={items.src}
+                                    alt={items.alt}
+                                    width={items.width}
+                                    height={items.height}
+                                />
+                            );
+                        })}
+                    </div>
+                </div>
                 <section className="bg-[#133181] w-screen px-[15vw] py-[5vw] text-white">
                     <div className="flex xl:flex-row flex-col justify-between my-12">
                         <div className="flex items-center justify-center">
@@ -342,40 +533,40 @@ export default function Home() {
                             </div>
 
                             {/* <div className="grid grid-cols-2 gap-4 w-full">
-                                <div className="col-span-1">
-                                    <label className="text-md">Name</label>
-                                    <input
-                                        type="text"
-                                        className=" w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
-                                    ></input>
-                                </div>
-                                <div className="col-span-1">
-                                    <label className="text-md col-span-2">
-                                        Country
-                                    </label>
-                                    <input
-                                        type="text"
-                                        className="col-span-2 w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
-                                    ></input>
-                                </div>
-                                <div className="col-span-2">
-                                    <label className="text-md ">Email</label>
-                                    <input
-                                        type="email"
-                                        className="col-span-2 w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
-                                    ></input>
-                                </div>
-                                <div className="flex flex-row gap-2 mt-2 col-span-2">
-                                    <input type="checkbox"></input>
-                                    <label>
-                                        Subscribe to the Draper University
-                                        newsletter
-                                    </label>
-                                </div>
-                            </div> */}
+                        <div className="col-span-1">
+                            <label className="text-md">Name</label>
+                            <input
+                                type="text"
+                                className=" w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
+                            ></input>
+                        </div>
+                        <div className="col-span-1">
+                            <label className="text-md col-span-2">
+                                Country
+                            </label>
+                            <input
+                                type="text"
+                                className="col-span-2 w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
+                            ></input>
+                        </div>
+                        <div className="col-span-2">
+                            <label className="text-md ">Email</label>
+                            <input
+                                type="email"
+                                className="col-span-2 w-full h-[3.638] rounded-[0.661vw] border-[0.132vw] border-[#ababab] ps-[1vw] text-[1.058vw]"
+                            ></input>
+                        </div>
+                        <div className="flex flex-row gap-2 mt-2 col-span-2">
+                            <input type="checkbox"></input>
+                            <label>
+                                Subscribe to the Draper University
+                                newsletter
+                            </label>
+                        </div>
+                    </div> */}
                             {/* <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
-                                Download
-                            </button> */}
+                        Download
+                    </button> */}
                         </div>
                     </div>
                 </section>
@@ -387,7 +578,7 @@ export default function Home() {
                         <div className="flex flex-col items-center mb-4 mt-12">
                             <H3
                                 text={
-                                    "How do we partner with Government Agencies?"
+                                    "How do we partner with Corporations and Enterprise?"
                                 }
                             />
                             <div className="grid xl:grid-cols-3 grid-cols-1 gap-8 gap-y-28 mt-20 justify-center">
@@ -634,16 +825,16 @@ export default function Home() {
                         </Card>
 
                         {/* {govtLogos.map((items) => {
-                            return (
-                                <LogoAvatar
-                                    key={items.alt}
-                                    src={items.src}
-                                    alt={items.alt}
-                                    width={items.width}
-                                    height={items.height}
-                                />
-                            );
-                        })} */}
+                    return (
+                        <LogoAvatar
+                            key={items.alt}
+                            src={items.src}
+                            alt={items.alt}
+                            width={items.width}
+                            height={items.height}
+                        />
+                    );
+                })} */}
                     </div>
                 </div>
                 <section className="bg-[#133181] w-screen px-[15vw] py-[5vw] text-white">
@@ -703,213 +894,6 @@ export default function Home() {
             </div>
         </main>
     );
-}
+};
 
-const govtLogos = [
-    {
-        src: "/govtLogos/jetro-logo.png",
-        alt: "JETRO logo",
-        width: 250,
-        height: 50,
-        country: "japan",
-    },
-    {
-        src: "/govtLogos/KISED-logo.webp",
-        alt: "KISED logo",
-        width: 250,
-        height: 50,
-        country: "korea",
-    },
-    {
-        src: "/govtLogos/ankara-development-agency-logo.jpeg",
-        alt: "Ankara Development Agency logo",
-        width: 250,
-        height: 50,
-        country: "turkey",
-    },
-    {
-        src: "/govtLogos/SIDF_Logo.png",
-        alt: "SIDF logo",
-        width: 250,
-        height: 50,
-        country: "saudiarabia",
-    },
-    {
-        src: "/govtLogos/DER-logo.png",
-        alt: "DER logo",
-        width: 250,
-        height: 50,
-        country: "sengal",
-    },
-    {
-        src: "/govtLogos/asvda.png",
-        alt: "ASVDA logo",
-        width: 250,
-        height: 50,
-        country: "taiwan",
-    },
-];
-
-const portfolioCompanies = [
-    {
-        src: "/portfolioCompanies/baidu.png",
-        alt: "Baidu Logo",
-        width: 102,
-        height: 50,
-    },
-    {
-        src: "/portfolioCompanies/skype.png",
-        alt: "Skype Logo",
-        width: 102,
-        height: 50,
-    },
-    {
-        src: "/portfolioCompanies/Coinbase-logo.png",
-        alt: "Coinbase Logo",
-        width: 102,
-        height: 50,
-    },
-    {
-        src: "/portfolioCompanies/tesla.png",
-        alt: "Tesla Logo",
-        width: 102,
-        height: 35,
-    },
-    {
-        src: "/portfolioCompanies/DocuSign-Logo.png",
-        alt: "Docusign Logo",
-        width: 102,
-        height: 50,
-    },
-    {
-        src: "/portfolioCompanies/hotmail.png",
-        alt: "Hotmail Logo",
-        width: 102,
-        height: 50,
-    },
-    {
-        src: "/portfolioCompanies/Robinhood-logo.png",
-        alt: "Robinhood Logo",
-        width: 102,
-        height: 50,
-    },
-
-    {
-        src: "/portfolioCompanies/twitch.png",
-        alt: "Twitch Logo",
-        width: 102,
-        height: 35,
-    },
-];
-
-const pastSpeakers = [
-    {
-        headshot: {
-            src: "/pastSpeakers/musk.png",
-            alt: "Elon Musk",
-            width: 150,
-            height: 50,
-        },
-        logo: {
-            src: "/pastSpeakers/tesla.avif",
-            alt: "Tesla Logo",
-            width: 50,
-            height: 50,
-        },
-    },
-    {
-        headshot: {
-            src: "/pastSpeakers/andreessen.png",
-            alt: "Mark Andreessen",
-            width: 150,
-            height: 50,
-        },
-        logo: {
-            src: "/pastSpeakers/a16z.png",
-            alt: "a16z Logo",
-            width: 50,
-            height: 50,
-        },
-    },
-    {
-        headshot: {
-            src: "/pastSpeakers/ravikant.png",
-            alt: "Naval Ravikant",
-            width: 150,
-            height: 50,
-        },
-        logo: {
-            src: "/pastSpeakers/angellist.png",
-            alt: "Angel List Logo",
-            width: 50,
-            height: 50,
-        },
-    },
-    {
-        headshot: {
-            src: "/pastSpeakers/phan.png",
-            alt: "Michelle Phan",
-            width: 150,
-            height: 50,
-        },
-        logo: {
-            src: "/pastSpeakers/ipsy.png",
-            alt: "Ipsy Logo",
-            width: 50,
-            height: 50,
-        },
-    },
-    {
-        headshot: {
-            src: "/pastSpeakers/hyman.png",
-            alt: "Jennifer Hyman",
-            width: 150,
-            height: 50,
-        },
-        logo: {
-            src: "/pastSpeakers/rtr.png",
-            alt: "Run The Runway Logo",
-            width: 50,
-            height: 50,
-        },
-    },
-];
-
-const alumniCompanies = [
-    {
-        src: "/portfolioCompanies/helium.png",
-        alt: "Helium Logo",
-        width: 102,
-        height: 50,
-    },
-    {
-        src: "/portfolioCompanies/henry.png",
-        alt: "HENRY Logo",
-        width: 102,
-        height: 50,
-    },
-    {
-        src: "/portfolioCompanies/lemon.png",
-        alt: "Lemon Cash Logo",
-        width: 102,
-        height: 50,
-    },
-    {
-        src: "/portfolioCompanies/ring.png",
-        alt: "Ring Logo",
-        width: 102,
-        height: 50,
-    },
-    {
-        src: "/portfolioCompanies/nVision.png",
-        alt: "nVision Logo",
-        width: 102,
-        height: 35,
-    },
-    {
-        src: "/portfolioCompanies/yestheory.png",
-        alt: "YES Theory Logo",
-        width: 102,
-        height: 50,
-    },
-];
+export default page;
