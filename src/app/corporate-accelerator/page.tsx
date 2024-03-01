@@ -671,22 +671,22 @@ const page = () => {
                                         <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
                                             <Icon label="entreprenuer" />
                                         </div>
-                                        <H4
-                                            text={
-                                                "Entrepreneurship Fundamentals"
-                                            }
-                                        />
+                                        <H4 text={"Corporate Accelerators"} />
                                         <p className="text-lg">
-                                            Develop local or virtual programs
-                                            focused on developing skills in
-                                            entrepreneurship. Focused on young
-                                            professionals & university students
+                                            Design and collaborate on a flagship
+                                            accelerated program with a
+                                            designated theme. DraperU brings
+                                            together world-class facilitators,
+                                            industry experts, mentors, and
+                                            investors to provide skills to a
+                                            portfolio of companies seeking
+                                            venture funding.
                                             <br />
                                             <br />
-                                            Equip young entrepreneurs with the
-                                            skills to think bigger, problem
-                                            solve and to build innovative
-                                            ventures.
+                                            The program culminates with a demo
+                                            day where investors from across the
+                                            globe gather to raise capital and
+                                            take businesses to the next level.
                                         </p>
                                         <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
                                             Learn More
@@ -699,23 +699,22 @@ const page = () => {
                                         <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
                                             <Icon label="startup" />
                                         </div>
-                                        <H4 text={"Incubators"} />
+                                        <H4 text={"Hackathons"} />
                                         <p className="text-lg">
-                                            Enrol your local startups and early
-                                            stage founders in our Global
-                                            Incubator programs. The experience
-                                            is designed to expand the founders
-                                            global network of mentor, peers and
-                                            investors.
+                                            Collaborate with your team to issue
+                                            a 'Corporate Challenge' to
+                                            university students and other young
+                                            entrepreneurs, or host an internal
+                                            hackathon to stimulate corporate
+                                            development.
                                             <br />
                                             <br />
-                                            Over the course of 5 weeks - we
-                                            cover a variety of diverse topics:
-                                            market validation, pitch readiness,
-                                            collaborative problem-solving. It is
-                                            structured to build endurance and
-                                            enhance the capacity for
-                                            entrepreneurship in each individual.
+                                            These hackthons could provide
+                                            early-stage recruitment for young
+                                            talent, build a startup to solve a
+                                            company challenge, or be the initial
+                                            step in building a corporate venture
+                                            capital vertical for your business.
                                         </p>
                                         <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
                                             Learn More
@@ -749,23 +748,65 @@ const page = () => {
                                         <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
                                             <Icon label="scaleup" />
                                         </div>
-                                        <H4 text={"Accelerators"} />
-
+                                        <H4
+                                            text={
+                                                "Corporate Innovation Program"
+                                            }
+                                        />
                                         <p className="text-lg">
-                                            Create a Bespoke Accelerator Program
-                                            tailored to a theme of interest in
-                                            line with your develop goals.
+                                            A short-term program aimed at
+                                            accelerating the learning process of
+                                            Startup Principles for your
+                                            corporate executives looking to
+                                            build a new product in-house.
+                                            skills.
                                             <br />
                                             <br />
-                                            Leverage our expertise in scouting,
-                                            our speaker network and our venture
-                                            capital network to provide support
-                                            to all types of scaleups.
+                                            DraperU brings together world-class
+                                            facilitators, industry experts, and
+                                            mentors to guide executives on
+                                            learning foundational startup
                                         </p>
                                         <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
                                             Learn More
                                         </button>
                                     </Card>
+                                </div>
+                                <div className="xl:col-span-2">
+                                    <Card>
+                                        <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
+                                            <Icon label="startup" />
+                                        </div>
+                                        <H4 text={"Investor Education"} />
+                                        <p className="text-lg">
+                                            Training to empower team members
+                                            with the knowledge and skills to
+                                            become proficient angel investors
+                                            and corporate venture capitalists.
+                                            <br />
+                                            <br />
+                                            Learn from Silicon Valley pioneers
+                                            and investment leaders, immersing
+                                            yourself in the intricacies of
+                                            identifying and supporting promising
+                                            startups, honing your ability to
+                                            make informed investment decisions.
+                                        </p>
+                                        <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
+                                            Learn More
+                                        </button>
+                                    </Card>
+                                </div>
+                                <div className="col-span-1 relative h-[380px] xl:h-auto">
+                                    <Image
+                                        fill={true}
+                                        src="/incubator.png"
+                                        alt="Incubators"
+                                        style={{
+                                            objectFit: "cover",
+                                            borderRadius: "16px",
+                                        }}
+                                    />
                                 </div>
                             </div>
                         </div>
