@@ -112,7 +112,7 @@ const portfolioCompanies = [
 const pastSpeakers = [
     {
         headshot: {
-            src: "/pastSpeakers/musk.png",
+            src: "/pastSpeakersEnt/elon.png",
             alt: "Elon Musk",
             width: 150,
             height: 50,
@@ -126,8 +126,8 @@ const pastSpeakers = [
     },
     {
         headshot: {
-            src: "/pastSpeakers/andreessen.png",
-            alt: "Mark Andreessen",
+            src: "/pastSpeakersEnt/andrewchen.png",
+            alt: "Andrew Chen",
             width: 150,
             height: 50,
         },
@@ -140,8 +140,8 @@ const pastSpeakers = [
     },
     {
         headshot: {
-            src: "/pastSpeakers/ravikant.png",
-            alt: "Naval Ravikant",
+            src: "/pastSpeakersEnt/jenniferfonstad.png",
+            alt: "Jennifer Fonstad",
             width: 150,
             height: 50,
         },
@@ -154,8 +154,8 @@ const pastSpeakers = [
     },
     {
         headshot: {
-            src: "/pastSpeakers/phan.png",
-            alt: "Michelle Phan",
+            src: "/pastSpeakersEnt/johnzimmer.png",
+            alt: "John Zimmer",
             width: 150,
             height: 50,
         },
@@ -168,8 +168,50 @@ const pastSpeakers = [
     },
     {
         headshot: {
-            src: "/pastSpeakers/hyman.png",
-            alt: "Jennifer Hyman",
+            src: "/pastSpeakersEnt/michael seibel.png",
+            alt: "Michael Seibel",
+            width: 150,
+            height: 50,
+        },
+        logo: {
+            src: "/pastSpeakers/rtr.png",
+            alt: "Run The Runway Logo",
+            width: 50,
+            height: 50,
+        },
+    },
+    {
+        headshot: {
+            src: "/pastSpeakersEnt/chingyuhu.png",
+            alt: "Ching Yu Hu",
+            width: 150,
+            height: 50,
+        },
+        logo: {
+            src: "/pastSpeakers/rtr.png",
+            alt: "Run The Runway Logo",
+            width: 50,
+            height: 50,
+        },
+    },
+    {
+        headshot: {
+            src: "/pastSpeakersEnt/nateblecharzyk.png",
+            alt: "Nate Blecharzyk",
+            width: 150,
+            height: 50,
+        },
+        logo: {
+            src: "/pastSpeakers/rtr.png",
+            alt: "Run The Runway Logo",
+            width: 50,
+            height: 50,
+        },
+    },
+    {
+        headshot: {
+            src: "/pastSpeakersEnt/naval.png",
+            alt: "Naval Ravikant",
             width: 150,
             height: 50,
         },
@@ -466,7 +508,7 @@ const page = () => {
                         })}
                     </div>
                 </div>
-                <div className="flex flex-col items-center my-12">
+                {/* <div className="flex flex-col items-center my-12">
                     <p className="text-lg font-light mb-4">
                         Some of the startups from our accelerator programs
                     </p>
@@ -483,7 +525,7 @@ const page = () => {
                             );
                         })}
                     </div>
-                </div>
+                </div> */}
                 <section className="bg-[#133181] w-screen px-[15vw] py-[5vw] text-white">
                     <div className="flex xl:flex-row flex-col justify-between my-12">
                         <div className="flex items-center justify-center">
@@ -496,39 +538,70 @@ const page = () => {
                             />
                         </div>
                         <div className="flex flex-col items-center w-full xl:items-start xl:w-[35vw]">
-                            <h2 className="text-4xl font-bold mb-8 mt-4 xl:mt-0">
-                                Download our Ecosystem Impact Casestudies
-                            </h2>
-                            <p className="text-[1rem] mb-8">
-                                Get the actionable insights on how to grow your
-                                entreprenuerial ecosystem - breakdown the growth
-                                journey of some our biggest investments - Skype,
-                                Baidu and more...
-                            </p>
-                            <div className="grid grid-cols-2 mb-4 text-[1rem] font-semibold w-full">
-                                <div className="flex flex-row items-center gap-2 col-span-1 mb-4">
-                                    <Icon label={"check"} />
-                                    <p>GDP contribution breakdown</p>
-                                </div>
-                                <div className="flex flex-row items-center gap-2 col-span-1 mb-4">
-                                    <Icon label={"check"} />
-                                    <p>Job creation metrics</p>
-                                </div>
-                                <div className="flex flex-row items-center gap-2 col-span-1 mb-4">
-                                    <Icon label={"check"} />
-                                    <p>Growth Hacking strategies</p>
-                                </div>
-                                <div className="flex flex-row items-center gap-2 col-span-1 mb-4">
-                                    <Icon label={"check"} />
-                                    <p>Ripple effect breakdown</p>
-                                </div>
-                            </div>
                             <div className="w-full">
-                                <div
-                                    className="pipedriveWebForms"
-                                    data-pd-webforms="https://webforms.pipedrive.com/f/63kW5dWc1oPBO3X4eZURDlesJHvjhut3u5fiISr12OmFMZi9zcyOXWT4avo0NiuhBF"
-                                >
-                                    <script src="https://webforms.pipedrive.com/f/loader"></script>
+                                <div className="bg-white rounded-2xl p-12">
+                                    <h2 className="text-4xl font-bold mb-8 mt-4 xl:mt-0 text-[#061C41]">
+                                        Download our Corporate Accelerator
+                                        Casestudies
+                                    </h2>
+                                    <p className="text-[1rem] mb-8 text-[#061C41]">
+                                        Get the actionable insights from our
+                                        track record of successful corporate
+                                        collaborations. Including a success
+                                        breakdown from our biggest wins:
+                                    </p>
+                                    <div className="grid grid-cols-2 mb-4 text-[1rem] font-semibold w-full text-[#061C41]">
+                                        <div className="flex flex-row items-center gap-2 col-span-1 mb-4">
+                                            <div className="h-6 w-6">
+                                                <Icon label={"check"} />
+                                            </div>
+                                            <p>Funding raised</p>
+                                        </div>
+                                        <div className="flex flex-row items-center gap-2 col-span-1 mb-4">
+                                            <div className="h-6 w-6">
+                                                <Icon label={"check"} />
+                                            </div>
+                                            <p>Startups accelerated</p>
+                                        </div>
+                                        <div className="flex flex-row items-center gap-2 col-span-1 mb-4">
+                                            <div className="h-6 w-6">
+                                                <Icon label={"check"} />
+                                            </div>
+                                            <p>How to scout</p>
+                                        </div>
+                                        <div className="flex flex-row items-center gap-2 col-span-1 mb-4">
+                                            <div className="h-6 w-6">
+                                                <Icon label={"check"} />
+                                            </div>
+                                            <p>
+                                                How to integrate acquired
+                                                companies
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <form className="flex flex-col justify-center items-center relative p-4">
+                                        <input
+                                            id="Name"
+                                            placeholder="Name"
+                                            className="rounded-md border-[#CCDAEE] border-[2px] p-4 mb-4 w-full"
+                                        ></input>
+                                        <input
+                                            id="Email"
+                                            placeholder="Email"
+                                            className="rounded-md border-[#CCDAEE] border-[2px] p-4 mb-4 w-full"
+                                        ></input>
+                                        <textarea
+                                            id="Message"
+                                            placeholder="Message"
+                                            className="rounded-md border-[#CCDAEE] border-[2px] p-4 mb-4 w-full"
+                                        ></textarea>
+                                        <button
+                                            type="submit"
+                                            className="bg-[#FED628] text-[#3661AF] font-bold rounded-[200px] py-4 text-lg w-[280px] absolute -bottom-[60px]"
+                                        >
+                                            Get Download Link
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
 
@@ -698,7 +771,7 @@ const page = () => {
                         </div>
                     </div>
                 </section>
-                <section className="flex flex-col justify-center items-center min-h-[45vw] w-auto bg-[#133181] text-[#ffffff] w-screen">
+                {/* <section className="flex flex-col justify-center items-center min-h-[45vw] w-auto bg-[#133181] text-[#ffffff] w-screen">
                     <div className="mb-20">
                         <H3 text={"A day in our programs"} />
                     </div>
@@ -754,12 +827,12 @@ const page = () => {
                             <p className="text-lg">Session 4</p>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <div className="flex flex-col items-center mt-2 mb-4">
                     <p className="text-lg font-light my-12">
                         Past speakers include
                     </p>
-                    <div className="flex flex-row mb-8">
+                    <div className="grid md:grid-cols-4 grid-cols-8 mb-8 gap-12">
                         {pastSpeakers.map((items) => {
                             return (
                                 <HeadshotAndLogoAvatar
@@ -839,12 +912,48 @@ const page = () => {
                 </div>
                 <section className="bg-[#133181] w-screen px-[15vw] py-[5vw] text-white">
                     <div className="flex flex-row justify-between items-center gap-12">
-                        <div
+                        <div className="bg-white rounded-2xl p-8">
+                            <h3 className="text-[#061C41] text-3xl font-bold mb-4 w-[400px]">
+                                Let's grow your Innovation Program together
+                            </h3>
+                            <p className="text-[#061C41] text-md mb-4">
+                                Schedule a strategy call today
+                            </p>
+                            <form className="flex flex-col justify-center items-center relative p-4">
+                                <input
+                                    id="Name"
+                                    placeholder="Name"
+                                    className="rounded-md border-[#CCDAEE] border-[2px] p-4 mb-4 w-full"
+                                ></input>
+                                <input
+                                    id="Email"
+                                    placeholder="Email"
+                                    className="rounded-md border-[#CCDAEE] border-[2px] p-4 mb-4 w-full"
+                                ></input>
+                                <input
+                                    id="CompanyName"
+                                    placeholder="CompanyName"
+                                    className="rounded-md border-[#CCDAEE] border-[2px] p-4 mb-4 w-full"
+                                ></input>
+                                <textarea
+                                    id="Message"
+                                    placeholder="Message"
+                                    className="rounded-md border-[#CCDAEE] border-[2px] p-4 mb-4 w-full"
+                                ></textarea>
+                                <button
+                                    type="submit"
+                                    className="bg-[#FED628] text-[#3661AF] font-bold rounded-[200px] py-4 text-lg w-[280px] absolute -bottom-[60px]"
+                                >
+                                    Book Meeting
+                                </button>
+                            </form>
+                        </div>
+                        {/* <div
                             className="pipedriveWebForms"
                             data-pd-webforms="https://webforms.pipedrive.com/f/6rG46dzR3kUrVs5l4wC6qQZCbS1s0CihnZuvm8LOyxKzOgoAyZwySypOwnLW8KoIM3"
                         >
                             <script src="https://webforms.pipedrive.com/f/loader"></script>
-                        </div>
+                        </div> */}
                         <div className="flex justify-center h-[500px] w-full">
                             <Image
                                 src="/timdraper.jpeg"

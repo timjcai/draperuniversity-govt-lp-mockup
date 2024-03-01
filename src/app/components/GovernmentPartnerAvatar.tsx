@@ -79,7 +79,7 @@ export const HeadshotAndLogoAvatar: FC<HSAndLogo> = ({ headshot, logo }) => {
                 height={headshot.height}
                 style={{ objectFit: "cover" }}
             />
-            <p className="text-md mt-2">{headshot.alt}</p>
+            <p className="text-md mt-2 w-[150px]">{headshot.alt}</p>
             {/* <div className="absolute -right-2 -bottom-1">
                 <Image
                     src={logo.src}
