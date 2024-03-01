@@ -168,7 +168,7 @@ const pastSpeakers = [
     },
     {
         headshot: {
-            src: "/pastSpeakersEnt/michael seibel.png",
+            src: "/pastSpeakersEnt/michaelseibel.png",
             alt: "Michael Seibel",
             width: 150,
             height: 50,
@@ -669,7 +669,9 @@ const page = () => {
                                 <div className="xl:col-span-2">
                                     <Card>
                                         <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                            <Icon label="entreprenuer" />
+                                            <div className="h-6 w-6">
+                                                <Icon label="entreprenuer" />
+                                            </div>
                                         </div>
                                         <H4 text={"Corporate Accelerators"} />
                                         <p className="text-lg">
@@ -697,7 +699,9 @@ const page = () => {
                                 <div className="xl:col-span-2">
                                     <Card>
                                         <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                            <Icon label="startup" />
+                                            <div className="h-6 w-6">
+                                                <Icon label="startup" />
+                                            </div>
                                         </div>
                                         <H4 text={"Hackathons"} />
                                         <p className="text-lg">
@@ -746,7 +750,9 @@ const page = () => {
                                 <div className="col-span-2">
                                     <Card>
                                         <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                            <Icon label="scaleup" />
+                                            <div className="h-6 w-6">
+                                                <Icon label="scaleup" />
+                                            </div>
                                         </div>
                                         <H4
                                             text={
@@ -775,7 +781,9 @@ const page = () => {
                                 <div className="xl:col-span-2">
                                     <Card>
                                         <div className="bg-[#E6F2FF] mb-7 flex h-14 w-14 place-items-center rounded-full justify-center relative -left-2 text-xl">
-                                            <Icon label="startup" />
+                                            <div className="h-6 w-6">
+                                                <Icon label="startup" />
+                                            </div>
                                         </div>
                                         <H4 text={"Investor Education"} />
                                         <p className="text-lg">
