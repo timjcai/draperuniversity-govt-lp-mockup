@@ -737,7 +737,7 @@ const page = () => {
                                 <div className="col-span-1 relative h-[380px] xl:h-auto">
                                     <Image
                                         fill={true}
-                                        src="/corporate/corporateinnovation.jpg"
+                                        src="/corporate/corporateinnovation2.jpg"
                                         alt="corporate_innovation"
                                         style={{
                                             objectFit: "cover",
@@ -806,7 +806,7 @@ const page = () => {
                                 <div className="col-span-1 relative h-[380px] xl:h-auto">
                                     <Image
                                         fill={true}
-                                        src="/corporate/investoreducation.jpg"
+                                        src="/corporate/investoreduc2.jpg"
                                         alt="investor_education"
                                         style={{
                                             objectFit: "cover",
