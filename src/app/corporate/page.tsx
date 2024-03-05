@@ -692,9 +692,9 @@ const page = () => {
                                             globe gather to raise capital and
                                             take businesses to the next level.
                                         </p>
-                                        <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
+                                        {/* <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
                                             Learn More
-                                        </button>
+                                        </button> */}
                                     </Card>
                                 </div>
 
@@ -722,9 +722,9 @@ const page = () => {
                                             step in building a corporate venture
                                             capital vertical for your business.
                                         </p>
-                                        <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
+                                        {/* <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
                                             Learn More
-                                        </button>
+                                        </button> */}
                                     </Card>
                                 </div>
                                 <div className="col-span-1 relative h-[380px] xl:h-auto">
@@ -775,9 +775,9 @@ const page = () => {
                                             mentors to guide executives on
                                             learning foundational startup
                                         </p>
-                                        <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
+                                        {/* <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
                                             Learn More
-                                        </button>
+                                        </button> */}
                                     </Card>
                                 </div>
                                 <div className="xl:col-span-2">
@@ -802,9 +802,9 @@ const page = () => {
                                             startups, honing your ability to
                                             make informed investment decisions.
                                         </p>
-                                        <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
+                                        {/* <button className="bg-[#F4DE5D] rounded-[48px] px-8 py-4 mt-4 text-black">
                                             Learn More
-                                        </button>
+                                        </button> */}
                                     </Card>
                                 </div>
                                 <div className="col-span-1 relative h-[380px] xl:h-auto">
