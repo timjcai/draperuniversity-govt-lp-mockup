@@ -326,11 +326,13 @@ const page = () => {
                             Corporate Accelerator Patnerships
                         </h1>
                         <h2 className="xl:text-6xl font-bold mb-8 xl:w-[50vw] w-full text-4xl xl:text-start text-center">
-                            Discover, Mentor and Grow the World's Best Startups.
+                            We Discover, Mentor and Grow the World's Best
+                            Startups for you.
                         </h2>
                         <p className="xl:text-xl w-[50vw] mb-4 xl:w-[50vw] w-full text-xl xl:text-start text-center">
-                            Custom designed programming to give you and your
-                            startups the edge on the competition.
+                            Custom-designed programming to give you the edge on
+                            the competition, to fast-track innovation and to
+                            create new revenue streams.
                         </p>
                         <p className="text-xl w-[50vw] mb-4 xl:w-[50vw] w-full text-xl xl:text-start text-center">
                             Future-proof your business by investing and building
@@ -454,6 +456,8 @@ const page = () => {
                                 <H4 text={"Expert Guidance"} />
                                 <p className="text-lg">
                                     Leverage our investor and startup experience
+                                    from Silicon Valley Venture Capitalist to
+                                    Unicorn Founders.
                                 </p>
                             </Card>
                             <Card>
