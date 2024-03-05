@@ -285,9 +285,7 @@ const page = () => {
                                 <Link href="/embed">Founder</Link>
                             </li>
                             <li className="text-[1.058vw] px-8 py-5 ">
-                                <Link href="/corporate-accelerator">
-                                    Executive
-                                </Link>
+                                <Link href="/corporate">Executive</Link>
                             </li>
                             <li className="text-[1.058vw] px-8 py-5 ">
                                 <a>Investors</a>
@@ -307,7 +305,7 @@ const page = () => {
                 <div className="flex flex-col items-center h-[60vh] relative -z-10 mb-4">
                     <div className="w-screen h-full">
                         <Image
-                            src="/govt-hero.png"
+                            src="/corporate/hero.png"
                             fill={true}
                             // width={1512}
                             // height={745}
@@ -658,8 +656,8 @@ const page = () => {
                                 <div className="xl:col-span-1 relative h-[380px] xl:h-auto">
                                     <Image
                                         fill={true}
-                                        src="/entrepreneurship101.png"
-                                        alt="Entrepreneurship Fundamentals"
+                                        src="/corporate/corporateaccelerator.png"
+                                        alt="corporate_accelerator"
                                         style={{
                                             objectFit: "cover",
                                             borderRadius: "8px",
@@ -728,8 +726,8 @@ const page = () => {
                                 <div className="col-span-1 relative h-[380px] xl:h-auto">
                                     <Image
                                         fill={true}
-                                        src="/incubator.png"
-                                        alt="Incubators"
+                                        src="/corporate/hackathons.jpg"
+                                        alt="hackathon"
                                         style={{
                                             objectFit: "cover",
                                             borderRadius: "16px",
@@ -739,8 +737,8 @@ const page = () => {
                                 <div className="col-span-1 relative h-[380px] xl:h-auto">
                                     <Image
                                         fill={true}
-                                        src="/acceleration.png"
-                                        alt="Accelerators"
+                                        src="/corporate/corporateinnovation.jpg"
+                                        alt="corporate_innovation"
                                         style={{
                                             objectFit: "cover",
                                             borderRadius: "16px",
@@ -808,8 +806,8 @@ const page = () => {
                                 <div className="col-span-1 relative h-[380px] xl:h-auto">
                                     <Image
                                         fill={true}
-                                        src="/incubator.png"
-                                        alt="Incubators"
+                                        src="/corporate/investoreducation.jpg"
+                                        alt="investor_education"
                                         style={{
                                             objectFit: "cover",
                                             borderRadius: "16px",

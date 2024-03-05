@@ -34,9 +34,7 @@ export default function Home() {
                                 <Link href="/embed">Founder</Link>
                             </li>
                             <li className="text-[1.058vw] px-8 py-5 ">
-                                <Link href="/corporate-accelerator">
-                                    Executive
-                                </Link>
+                                <Link href="/corporate">Executive</Link>
                             </li>
                             <li className="text-[1.058vw] px-8 py-5 ">
                                 <a>Investors</a>
