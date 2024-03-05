@@ -806,7 +806,7 @@ const page = () => {
                                 <div className="col-span-1 relative h-[380px] xl:h-auto">
                                     <Image
                                         fill={true}
-                                        src="/corporate/investoreduc2.jpg"
+                                        src="/corporate/investoreduc3.jpg"
                                         alt="investor_education"
                                         style={{
                                             objectFit: "cover",
