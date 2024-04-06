@@ -1,5 +1,6 @@
 import { IconDefinition, faHive } from "@fortawesome/free-brands-svg-icons";
 import {
+    faArrowRight,
     faArrowUpRightDots,
     faArrowsSplitUpAndLeft,
     faAward,
@@ -14,6 +15,7 @@ import {
     faFilter,
     faGamepad,
     faHeartPulse,
+    faHouse,
     faMagnifyingGlass,
     faMicrochip,
     faMoneyBillTrendUp,
@@ -57,6 +59,9 @@ const iconMapping: { [key in IconType]: IconDefinition } = {
     guidance: faCircleInfo,
     "vertical expansion": faExpand,
     "investment opportunity": faMoneyBillTrendUp,
+    hackerhouse: faHouse,
+    embark: faHive,
+    bulletpoint: faArrowRight,
 };
 export type IconType = SectionType;
 
@@ -85,7 +90,10 @@ export type SectionType =
     | "global network"
     | "guidance"
     | "vertical expansion"
-    | "investment opportunity";
+    | "investment opportunity"
+    | "hackerhouse"
+    | "embark"
+    | "bulletpoint";
 
 export const Icon: FC<IconProps> = ({ label }) => {
     const icon = iconMapping[label];
